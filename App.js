@@ -40,12 +40,27 @@ const HomeStackNavigator = () => {
       headerRightContainerStyle:{paddingRight:10},
       headerTitle:()=>(
         <TouchableOpacity>
-          <Image source={logo} resizeMode="contain" style={{width:135}} />
+          <Image source={logo} resizeMode="contain" style={{width:135,height:50}} />
         </TouchableOpacity>
       )
 
     }}/>
   </Stack.Navigator>
+  )
+}
+
+const ProfileStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name='Profile' component={ProfileScreen} options={{
+      title:'Instagram',
+      headerLeft:() => <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}><Text style={{fontWeight:'600',fontSize:18,marginLeft:2}}>saisree-purella</Text><AnIonicons name='down' size={15} /></TouchableOpacity>,
+      headerRight:() => <TouchableOpacity><Ionicons name='menu-outline' size={25}  /></TouchableOpacity>,
+      headerLeftContainerStyle:{paddingLeft:10},
+      headerRightContainerStyle:{paddingRight:10},
+     headerTitle:()=>false
+    }}/>
+    </Stack.Navigator>
   )
 }
 
@@ -98,7 +113,7 @@ const App = () => {
         <BottomTab.Screen name='Discovery' component={DiscoveryScreen} />
         <BottomTab.Screen name='Post' component={PostScreen} />
         <BottomTab.Screen name='Potification' component={NotificationScreen} />
-        <BottomTab.Screen name='Profile' component={ProfileScreen} />
+        <BottomTab.Screen name='Profile' component={ProfileStackNavigator} />
       </BottomTab.Navigator>
     </NavigationContainer>
   );

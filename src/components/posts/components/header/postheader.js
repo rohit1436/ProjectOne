@@ -7,7 +7,7 @@ const PostHeader = ({imageUri,name}) => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.profileContainer}>
-      <ProfilePicture uri={imageUri} size={40}/>
+      <ProfilePicture uri={imageUri} colors={'#ae22e0'} size={40}/>
       <Text style={styles.name}>{name}</Text>
       </View>
       <View style={styles.icon}>
