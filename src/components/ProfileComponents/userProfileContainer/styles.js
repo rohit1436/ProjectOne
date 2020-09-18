@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
 mainContainer:{
   justifyContent:'center',
   borderWidth:1,
+  borderColor:'rgba(0,0,0,0.5)'
 },
 bottomContainer:{
 padding:6,
@@ -22,9 +23,10 @@ flexWrap:'wrap',
 padding:4
 },
 links:{
-  color:'blue',
+  color:'#00376b',
   textDecorationLine:'underline',
-  padding:4
+  padding:4,
+  fontWeight:'600'
 },
 lowerButton:{
   borderWidth:1,
